@@ -1,0 +1,53 @@
+@import "ag-grid-community/styles/ag-theme-alpine.css";
+
+/* Bootstrap 스타일 기반 커스텀 AG Grid 테마 */
+.ag-theme-bootstrap {
+  /* 기본 폰트 */
+  --ag-font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --ag-font-size: 13px;
+  --ag-font-color: #676a6c;
+
+  /* 헤더 */
+  --ag-header-background-color: #f8f9fa; /* Bootstrap light header */
+  --ag-header-foreground-color: #212529;
+  --ag-header-height: 30px;
+  --ag-header-cell-hover-background-color: #e9ecef;
+  --ag-header-border-color: #dee2e6;
+
+  /* Row */
+  --ag-row-height: 30px;
+  --ag-row-hover-color: #f1f3f5;
+  --ag-selected-row-background-color: #e2e6ea;
+  --ag-odd-row-background-color: #fcfcfc;
+
+  /* Borders */
+  --ag-borders: solid 1px;
+  --ag-border-color: #dee2e6;
+
+  /* Cell */
+  --ag-cell-horizontal-padding: 12px;
+
+  /* Checkbox */
+  --ag-checkbox-background-color: #fff;
+  --ag-checkbox-border-radius: 0.25rem;
+
+  /* Sorting icons */
+  --ag-icon-color: #6c757d;
+
+  /* Pagination */
+  --ag-paging-background-color: #f8f9fa;
+  --ag-paging-button-background-color: #fff;
+  --ag-paging-button-border-color: #ced4da;
+  --ag-paging-button-hover-background-color: #e9ecef;
+  --ag-paging-button-disabled-background-color: #f8f9fa;
+}
+
+/* 헤더 가운데 정렬 (옵션) */
+.ag-theme-bootstrap .ag-header-cell-label {
+  justify-content: center;
+}
+
+/* Checkbox 스타일 */
+.ag-theme-bootstrap .ag-checkbox-input-wrapper::after {
+  border-radius: 0.25rem;
+}
