@@ -10,10 +10,10 @@ const apiClient = axios.create({
         'Content-Type': 'application/json',  
         'Accept-Language': navigator.language || 'ko-KR',
         'X-Time-Zone': timeZone,
-        'X-Device-Type': 'WEB',
-        'X-Tenant': 'T917394998',
-        'X-Site': 'SNC_GIFT_SHOP',
-        'X-Channel': 'ADMIN', // ADMIN, SHOP, PURCHASING
+        'X-Tenant': 'T917394998',   // T917394998 고정
+        'X-Site': 'SNC_GIFT_SHOP',  // SNC_GIFT_SHOP 고정
+        'X-Device-Type': 'WEB',     // WEB, PC-WEB, MOBILE-WEB, TABLET, IOS, ANDROID
+        'X-Channel': 'ADMIN',       // ADMIN, SHOP, PURCHASING
     }
 });
 
