@@ -3,7 +3,7 @@ interface PageHeadingProps {
     breadcrumbs: { label: string; path?: string }[];
 }
 
-const PageHeading = ({ breadcrumbs }: PageHeadingProps) => {
+const Header = ({ breadcrumbs }: PageHeadingProps) => {
     return (
         <div className="row wrapper border-bottom white-bg page-heading" style={{paddingTop:10, paddingBottom:10}}>
             <div className="col-lg-10">
@@ -25,4 +25,4 @@ const PageHeading = ({ breadcrumbs }: PageHeadingProps) => {
     )
 }
 
-export default PageHeading
+export default Header

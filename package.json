@@ -4,7 +4,9 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "local": "vite --mode loc",
+    "dev": "NODE_OPTIONS='--max-old-space-size=512' tsc -b && vite build --mode dev",
+    "prod": "NODE_OPTIONS='--max-old-space-size=4096' tsc -b && vite build --mode prod",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -13,11 +15,14 @@
     "ag-grid-community": "^34.3.1",
     "ag-grid-react": "^34.3.1",
     "axios": "^1.13.2",
+    "dayjs": "^1.11.19",
     "localforage": "^1.10.0",
     "match-sorter": "^8.2.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-router-dom": "^7.9.6",
+    "recoil": "^0.7.7",
+    "recoil-persist": "^5.1.0",
     "sort-by": "^1.2.0"
   },
   "devDependencies": {
