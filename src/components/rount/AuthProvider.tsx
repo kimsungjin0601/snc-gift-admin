@@ -1,9 +1,9 @@
 
-import { loginCheckState, logoutState } from "@/states/atoms/loginState";
-import { type User, userState } from "@/states/atoms/userState";
+import { loginCheckState } from "@/states/atoms/loginState";
+import { userState } from "@/states/atoms/userState";
 import { userInfo } from "@/states/selectors/userSelector";
 import { createContext, useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import { useRecoilState, useRecoilValueLoadable } from "recoil";
 
 export const AuthContext = createContext(null);
@@ -13,8 +13,8 @@ export const AuthProvider = ({ children }) => {
     // const setSendbirdConnect = useSetRecoilState(sendbirdState)
     const loginUser = useRecoilValueLoadable(userInfo)
     const [isLoginCheck] = useRecoilState(loginCheckState);
-    const [, setIsLogout] = useRecoilState(logoutState);
-    const navigate = useNavigate()
+    // const [, setIsLogout] = useRecoilState(logoutState);
+    // const navigate = useNavigate()
     
     useEffect(() => {
         // const unsubscribe = auth.onIdTokenChanged((user) => {

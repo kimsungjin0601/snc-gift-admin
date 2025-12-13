@@ -46,7 +46,7 @@ const Sidebar = () => {
                     </li>
                     <li className={openMenu.menu2 ? "active" : ""}>
                         <Link to={"/blacklist"} >
-                            <i className="fa fa-table"></i> <span className="nav-label">블랙리스트</span>
+                            <i className="fa fa-diamond"></i> <span className="nav-label">블랙리스트</span>
                             {/* <span className="fa arrow"></span> */}
                         </Link>
 
@@ -59,7 +59,7 @@ const Sidebar = () => {
                     </li>
                     <li className={openMenu.menu3 ? "active" : ""}>
                         <Link to={"#"} onClick={() => toggleMenu("menu3")} style={{ cursor: "pointer" }}>
-                            <i className="fa fa-table"></i> <span className="nav-label">가상핀</span>
+                            <i className="fa fa-magic"></i> <span className="nav-label">가상핀</span>
                             <span className="fa arrow"></span>
                         </Link>
 
@@ -72,7 +72,7 @@ const Sidebar = () => {
                     </li>
                     <li className={openMenu.menu4 ? "active" : ""}>
                         <Link to={"#"} onClick={() => toggleMenu("menu4")} style={{ cursor: "pointer" }}>
-                            <i className="fa fa-table"></i> <span className="nav-label">포인트</span>
+                            <i className="fa fa-star"></i> <span className="nav-label">포인트</span>
                             <span className="fa arrow"></span>
                         </Link>
 
@@ -86,7 +86,7 @@ const Sidebar = () => {
                     </li>
                     <li className={openMenu.menu5 ? "active" : ""}>
                         <Link to={"#"} onClick={() => toggleMenu("menu5")} style={{ cursor: "pointer" }}>
-                            <i className="fa fa-table"></i> <span className="nav-label">포인트 (전일)</span>
+                            <i className="fa fa-laptop"></i> <span className="nav-label">포인트 (전일)</span>
                             <span className="fa arrow"></span>
                         </Link>
 
@@ -99,7 +99,7 @@ const Sidebar = () => {
                     </li>
                     <li className={openMenu.menu6 ? "active" : ""}>
                         <Link to={"/order"}>
-                            <i className="fa fa-table"></i> <span className="nav-label">주문 조회</span>
+                            <i className="fa fa-shopping-cart"></i> <span className="nav-label">주문 조회</span>
                             {/* <span className="fa arrow"></span> */}
                         </Link>
 

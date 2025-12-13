@@ -1,12 +1,12 @@
 import { selector } from 'recoil';
-import signService from '@/apis/service/signService';
+import signService from '@/apis/service/sign.service';
 
 export const userInfo = selector({
     key: 'userInfo',
     get: async ({ }) => {
         try {
             if(localStorage.getItem("token")){
-                const response = await signService.getUserInfo();
+                const response = await signService.getUserInfo({});
                 return response.data;
             }
             return null;

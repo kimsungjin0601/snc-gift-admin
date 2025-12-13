@@ -3,7 +3,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import { loginCheckState } from '@/states/atoms/loginState';
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { userState } from "@/states/atoms/userState";
-import signService from "@/apis/service/signService";
+import signService from "@/apis/service/sign.service";
 import TokenUtil from "@/utils/TokenUtil";
 
 const SignIn = () => {
@@ -29,7 +29,7 @@ const SignIn = () => {
             console.log('로그인 성공 !!', response)
             
             // 로그인 성공 시 사용자 정보 가져오기
-            const userResponse = await signService.getUserInfo();
+            const userResponse = await signService.getUserInfo({});
             setUser(userResponse.data)  // Recoil 상태에 사용자 정보 저장
             setIsLoginCheck(true)   // 로그인 상태 업데이트
 

@@ -51,3 +51,31 @@
 .ag-theme-bootstrap .ag-checkbox-input-wrapper::after {
   border-radius: 0.25rem;
 }
+
+/* 포커스 스타일 제거 */
+.ag-theme-alpine .ag-cell-focus,
+.ag-theme-alpine .ag-cell-focus:focus,
+.ag-theme-alpine .ag-cell:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* 포커스 스타일 제거 */
+.ag-theme-alpine .ag-row-focus {
+  outline: none !important;
+}
+
+/* 포커스 스타일 제거 */
+.ag-theme-bootstrap .ag-cell-focus,
+.ag-theme-bootstrap .ag-cell-focus:focus,
+.ag-theme-bootstrap .ag-cell:focus {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+/* row 포커스 제거 */
+.ag-theme-bootstrap .ag-row-focus {
+  outline: none !important;
+}

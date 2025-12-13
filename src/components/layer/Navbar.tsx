@@ -1,9 +1,9 @@
-import signService from "@/apis/service/signService";
+import signService from "@/apis/service/sign.service";
 // import { logoutState } from "@/states/atoms/loginState";
 import { userState } from "@/states/atoms/userState";
 import TokenUtil from "@/utils/TokenUtil";
 import { Link, useNavigate } from "react-router-dom";
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { useRecoilState,  } from "recoil";
 
 const Navbar = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
     const navigate = useNavigate()
@@ -28,6 +28,8 @@ const Navbar = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
         }
     }
 
+    // if (!user) return null;
+
     return (
         <div className="row border-bottom" style={{height:60}}>
             <nav className="navbar navbar-static-top" role="navigation">
@@ -44,7 +46,7 @@ const Navbar = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
                 </div>
                 <ul className="nav navbar-top-links navbar-right">
                     <li>
-                        <span className="m-r-sm text-muted welcome-message">{user.userName}</span>
+                        <span className="m-r-sm text-muted welcome-message">{user && user.userName}</span>
                     </li>
                     <li>
                         <Link  to={"#"} onClick={handleLogout}>

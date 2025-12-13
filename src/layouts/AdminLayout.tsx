@@ -1,11 +1,14 @@
-import { useEffect, useState, type ReactNode } from "react";
+import { useEffect, useState } from "react";
 import Sidebar from "../components/layer/Sidebar";
 import Navbar from "../components/layer/Navbar";
 import Footer from "../components/layer/Footer";
+import { Outlet } from "react-router-dom";
 
-const AdminLayout = ({ children }: { children: ReactNode }) => {
+const AdminLayout = () => {
     const [sidebarOpen, setSidebarOpen] = useState(true);
     const sideBarToggleClass = "mini-navbar";
+
+    console.log("AdminLayout rendered");
 
     useEffect(() => {
         // 초기 사이드바 상태 설정
@@ -26,7 +29,7 @@ const AdminLayout = ({ children }: { children: ReactNode }) => {
 
             <div id="page-wrapper" className="gray-bg">
                 <Navbar onToggleSidebar={toggleSidebar} />
-                {children}
+                <Outlet />
                 <Footer />
             </div>
         </div>
