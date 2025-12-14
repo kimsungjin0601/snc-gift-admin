@@ -28,8 +28,6 @@ const Navbar = ({ onToggleSidebar }: { onToggleSidebar: () => void }) => {
         }
     }
 
-    // if (!user) return null;
-
     return (
         <div className="row border-bottom" style={{height:60}}>
             <nav className="navbar navbar-static-top" role="navigation">

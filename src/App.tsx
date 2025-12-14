@@ -18,7 +18,7 @@ import { RecoilRoot } from 'recoil'
 import ScrollToTop from './components/scroll/ScrollToTop'
 import { PopupProvider } from './components/popup/PopupContext'
 
-import PublicRoute from './components/rount/PublicRoute'
+// import PublicRoute from './components/rount/PublicRoute'
 import { AuthProvider } from './components/rount/AuthProvider'
 import AuthRoute from './components/rount/AuthRoute'
 import BlacklistPage from './pages/member/BlacklistPage'
@@ -37,7 +37,7 @@ ModuleRegistry.registerModules([ AllCommunityModule ]);
 const MainApp = () => {   
     return (
         <Routes>
-            <Route path="/sign-in" element={<PublicRoute><SignIn/></PublicRoute>}></Route>
+            <Route path="/sign-in" element={<SignIn/>}></Route>
 
             <Route element={<AuthRoute><AdminLayout /></AuthRoute>}>
                 <Route index path="/" element={<PartnerPage />}></Route>

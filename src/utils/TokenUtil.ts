@@ -1,13 +1,13 @@
 const setAccessToken = (token) => {
-    localStorage.setItem('token', token);
+    localStorage.setItem('sncat', token);
 }
 
 const getAccessToken = () => {
-    return localStorage.getItem('token');
+    return localStorage.getItem('sncat');
 }
 
 const removeAccessToken = () => {
-    localStorage.removeItem('token');
+    localStorage.removeItem('sncat');
 }
 
 export default {
